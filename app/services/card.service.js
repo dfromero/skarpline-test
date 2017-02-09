@@ -9,23 +9,28 @@ angular.module('skarpline-test.services')
             return $q.when([
                 {
                     title: 'E-books',
-                    ownerPicture: 'http://pipsum.com/40x40.jpg'
+                    ownerPicture: 'http://pipsum.com/40x40.jpg',
+                    itemCount: '31 items'
                 },
                 {
                     title: 'Landing GIFs',
-                    ownerPicture: 'http://pipsum.com/40x40.jpg'
+                    ownerPicture: 'http://pipsum.com/40x40.jpg',
+                    itemCount: '2 items'
                 },
                 {
-                    name: 'LANDING PAGE',
-                    ownerPicture: 'http://pipsum.com/40x40.jpg'
+                    title: 'LANDING PAGE',
+                    ownerPicture: 'http://pipsum.com/40x40.jpg',
+                    itemCount: '6 items'
                 },
                 {
-                    name: 'New Social Image',
-                    ownerPicture: 'http://pipsum.com/40x40.jpg'
+                    title: 'New Social Image',
+                    ownerPicture: 'http://pipsum.com/40x40.jpg',
+                    itemCount: '19 items'
                 },
                 {
-                    name: 'Social Images',
-                    ownerPicture: 'http://pipsum.com/40x40.jpg'
+                    title: 'Social Images',
+                    ownerPicture: 'http://pipsum.com/40x40.jpg',
+                    itemCount: '1 item'
                 },
                 {
                     name: 'Note name',

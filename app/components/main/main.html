@@ -9,8 +9,8 @@
                 <div class="card-owner">
                     <img ng-src="{{card.ownerPicture}}" alt="{{card.name}}">
                 </div>
-                <div ng-if="!card.note" class="card-title">test</div>
-                <div ng-if="!card.note" class="card-item-count">31 items</div>
+                <div ng-if="!card.note" class="card-title">{{card.title}}</div>
+                <div ng-if="!card.note" class="card-item-count">{{card.itemCount}}</div>
             </div>
         </div>
     </div>
