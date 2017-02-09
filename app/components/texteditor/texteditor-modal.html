@@ -1,0 +1,8 @@
+<div class="modal-body" id="modal-body">
+    <span class="close" ng-click="close()">&times;</span>
+    <div class="note-name">
+        <i class="fa fa-book"></i>
+        <input type="text" ng-model="card.name">
+    </div>
+    <ng-quill-editor ng-model="card.contentHtml" on-editor-created="editorCreated(editor)" on-content-changed="contentChanged(editor, html, text)"></ng-quill-editor>
+</div>

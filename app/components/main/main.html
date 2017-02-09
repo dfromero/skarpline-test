@@ -1,0 +1,12 @@
+<div class="main">
+    <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12" ng-repeat="card in $ctrl.cards">
+            <div class="card" ng-class="card.cardModifier" ng-click="$ctrl.editCard(card)">
+                <div class="card-margin"></div>
+                <div class="card-name">{{card.name}}</div>
+                <div class="card-status">{{card.lastUpdated | timeago}}</div>
+                <div class="card-content" ng-bind-html="card.contentHtml"></div>
+            </div>
+        </div>
+    </div>
+</div>

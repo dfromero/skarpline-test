@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="talkboard-section">
+        <p class="talkboard-section-heading">Users <span>+</span></p>
+        <ul class="talkboard-item-list talkboard-item-list-user">
+            <li class="talkboard-item" ng-repeat="user in $ctrl.users track by $index"
+                ng-class="{'talkboard-item-favorited': user.favorited, 'talkboard-item-online': user.status === 'online' }">
+            <span class="talkboard-item-img">
+                <img ng-src="{{user.profilePicture}}" alt="{{user.name}}">
+            </span>
+                <p>
+                    {{user.name}}
+                    <span ng-if="user.status === 'online'" class="status" ng-bind="user.status"></span>
+                    <span ng-if="user.status !== 'online'" class="last-seen" ng-bind="user.lastSeen"></span>
+                </p>
+            </li>
+            <li class="talkboard-item talkboard-item-extra">
+                <span class="talkboard-item-img">
+                    <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                </span>
+                <p>
+                    Show more...
+                </p>
+                <i class="fa fa-chevron-down"></i>
+            </li>
+        </ul>
+    </div>
+    <div class="talkboard-section">
+        <p class="talkboard-section-heading">External Contacts <span>+</span></p>
+        <ul class="talkboard-item-list">
+            <li class="talkboard-item" ng-repeat="contact in $ctrl.contacts">
+            <span class="talkboard-item-img">
+                <img ng-src="{{contact.profilePicture}}" alt="{{user.name}}">
+            </span>
+                <p ng-bind="contact.name"></p>
+            </li>
+        </ul>
+    </div>
+    <div class="talkboard-section">
+        <p class="talkboard-section-heading">Private Groups <span>+</span></p>
+        <ul class="talkboard-item-list">
+            <li class="talkboard-item" ng-repeat="group in $ctrl.groups">
+                <span class="talkboard-item-img">
+                    <img ng-src="{{group.profilePicture}}" alt="{{user.name}}">
+                </span>
+                <p>
+                    {{group.name}}
+                    <span ng-if="group.status === 'online'" class="status" ng-bind="group.status"></span>
+                    <span ng-if="group.status !== 'online'" class="last-seen" ng-bind="group.lastSeen"></span>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="talkboard-section">
+        <div class="search-input">
+            <input type="text">
+            <i class="fa fa-search"></i>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+{
+  "name": "skarpline-test",
+  "authors": [
+    "Diego Romero <romero.pozo2012@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.2",
+    "textAngular": "^1.5.16",
+    "angular-ui-router": "1.0.0-rc.1",
+    "bootstrap": "^3.3.7",
+    "angular-bootstrap": "^2.5.0",
+    "ngQuill": "ng-quill#^2.2.3"
+  }
+}

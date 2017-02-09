@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skarpline Test</title>
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='bower_components/font-awesome/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='bower_components/textAngular/dist/textAngular.css'>
+    <!-- Style -->
+    <link rel="stylesheet" href="//cdn.quilljs.com/1.1.5/quill.snow.css">
+    <link rel="stylesheet" href="//cdn.quilljs.com/1.1.5/quill.bubble.css">
+
+    <link rel='stylesheet' href='assets/css/styles.css'>
+</head>
+<body ng-app="skarpline-test">
+
+<div class="container-fluid">
+    <ui-view></ui-view>
+</div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<script type="text/javascript" src="//cdn.quilljs.com/1.1.5/quill.js"></script>
+<script src="bower_components/ngQuill/src/ng-quill.min.js"></script>
+
+
+<script src="bower_components/textAngular/dist/textAngular-rangy.min.js"></script>
+<script src="bower_components/textAngular/dist/textAngular-sanitize.min.js"></script>
+<script src="bower_components/textAngular/dist/textAngular.min.js"></script>
+
+
+<!-- App -->
+<script src="app/app.js"></script>
+<script src="app/components/main/main.component.js"></script>
+<script src="app/components/talkboard/talkboard.component.js"></script>
+<script src="app/components/nav/nav.component.js"></script>
+<script src="app/components/toolbar/toolbar.component.js"></script>
+
+<script src="app/services/user.service.js"></script>
+<script src="app/services/contact.service.js"></script>
+<script src="app/services/group.service.js"></script>
+<script src="app/services/card.service.js"></script>
+
+<script src="app/filters/ago.filter.js"></script>
+
+</body>
+</html>
