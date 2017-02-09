@@ -1,9 +1,15 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
 
 .profile-info {
-    padding: 20px 30px;
-    background-color: #504e5b;
-    color: #fff;
     display: flex;
+
+    padding: 20px 30px;
+
+    color: #f2eef7;
+    background-color: #504e5b;
+
     align-items: center;
 }
 
@@ -12,18 +18,24 @@
 }
 
 .profile-info p {
+    font-weight: 300;
+
     margin: 0;
+
     flex: 1;
 }
 
 [ui-view='talkboard'] {
+    height: calc(100vh - 80px);
+
     background-color: #3e3c48;
 }
 
 .talkboard-section {
-    background-color: #3e3c48;
-    color: #fff;
     padding: 0 30px;
+
+    color: #fff;
+    background-color: #3e3c48;
 }
 
 .talkboard-section:last-child {
@@ -31,28 +43,35 @@
 }
 
 .talkboard-item-list {
-    list-style: none;
-    padding-left: 0;
     margin-bottom: 0;
+    padding-left: 0;
+
+    list-style: none;
 }
 
 .talkboard-item {
     display: flex;
-    align-items: center;
+
     padding: 10px 0 10px 0;
+
+    align-items: center;
 }
 
 .talkboard-item p {
-    margin: 0;
-    color: #f5f5f5;
     font-size: 1.2em;
+
+    margin: 0;
+
+    color: #f2eef7;
+
     flex: 1;
 }
 
 .talkboard-item p span {
-    display: block;
-    font-size: 0.7em;
+    font-size: .7em;
     font-style: italic;
+
+    display: block;
 }
 
 .talkboard-item p span.status {
@@ -65,36 +84,53 @@
 
 .talkboard-item.talkboard-item-favorited .talkboard-item-img:after,
 .talkboard-item.talkboard-item-favorited .talkboard-item-img:before {
-    display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
+
+    position: absolute;
+    right: 0;
+    bottom: -4px;
+
+    display: inline-block;
+
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    position: absolute;
-    bottom: -4px;
-    right: 0;
 }
 
 .talkboard-item.talkboard-item-favorited .talkboard-item-img:before {
-    content: "\f005";
+    content: '\f005';
+
     color: yellow;
 }
 
 .talkboard-item.talkboard-item-favorited .talkboard-item-img:after {
-    content: "\f006";
-    color: #30b44a;
     font-size: 1.1em;
+
     right: -1px;
     bottom: -5px;
+
+    content: '\f006';
+
+    color: #30b44a;
+}
+
+.talkboard-item.talkboard-item-extra p {
+    font-size: 1em;
+    font-weight: 400;
+
+    color: #ccc;
 }
 
 .talkboard-item.talkboard-item-extra .talkboard-item-img {
-    border: none;
     display: flex;
+
+    text-align: center;
+
+    border: none;
+
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
 .talkboard-item.talkboard-item-extra .talkboard-item-img .fa {
@@ -111,73 +147,83 @@
 }
 
 .talkboard-item-list-user .talkboard-item.talkboard-item-online .talkboard-item-img {
-    border-color: #30b44a;
+    border-color: #58927e;
 }
 
 .talkboard-section-heading {
-    color: #656370;
     font-style: italic;
-    border-bottom: 1px solid #ccc;
-    text-transform: uppercase;
+
+    margin-right: -30px;
     margin-bottom: 0;
     margin-left: -30px;
-    margin-right: -30px;
     padding: 10px 10px 10px 30px;
+
+    text-transform: uppercase;
+
+    color: #656370;
+    border-bottom: 1px solid #ccc;
 }
 
 .talkboard-section-heading span {
-    float: right;
     font-size: 2.7em;
-    line-height: 16px;
-    color: #F5F5F5;
     font-weight: 100;
+    font-style: normal;
+    line-height: 16px;
+
+    float: right;
+
+    color: #f5f5f5;
 }
 
 .talkboard-item-img,
 .profile-info-img {
     display: inline-block;
-    margin-right: 5px;
+
     width: 40px;
     height: 40px;
+    margin-right: 5px;
+
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
 }
 
 .talkboard-item-img {
-    border: 3px solid #f5f5f5;
     position: relative;
+
+    border: 3px solid #f5f5f5;
 }
 
 .talkboard-item-list-user .talkboard-item-img {
-    border-color: #985f0d;
-}
-
-.profile-info-img {
+    border-color: #c47270;
 }
 
 .talkboard-item-img img,
 .profile-info-img img {
+    max-width: 100%;
+    height: auto;
+
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    max-width: 100%;
-    height: auto;
 }
 
 .search-input {
     position: relative;
-    padding: 20px 0px 0 0;
+
+    padding: 20px 0 0 0;
 }
 
 .search-input input {
+    font-size: 1.8em;
+
     width: 100%;
+    height: 40px;
     padding-right: 40px;
+
     border: none;
     border-bottom: 1px solid #f5f5f5;
     background: transparent;
-    height: 40px;
-    font-size: 1.8em;
 }
 
 .search-input input:focus {
@@ -185,12 +231,14 @@
 }
 
 .search-input input + i {
+    font-size: 1.6em;
+
     position: absolute;
     right: 14px;
     bottom: 14px;
-    font-size: 1.6em;
+
+    opacity: .9;
     color: #656370;
-    opacity: 0.9;
 }
 
 /* NAV */
@@ -199,17 +247,24 @@
     background-color: #f1efe7;
 }
 
-.logo, .action-block {
+.logo,
+.action-block {
     display: flex;
+
     align-items: center;
 }
 
-.logo img, .action-block a {
-    flex: 1;
+.logo img,
+.action-block a {
     text-align: center;
+    text-decoration: none;
+
+    flex: 1;
 }
 
-.logo, .action-block, .search-block {
+.logo,
+.action-block,
+.search-block {
     height: 100%;
 }
 
@@ -222,12 +277,14 @@
 }
 
 .action-block .action-handler {
-    color: #fff;
     font-size: 4em;
     font-weight: 100;
+
+    color: #fff;
 }
 
-nav, .toolbar {
+nav,
+.toolbar {
     height: 80px;
 }
 
@@ -241,147 +298,241 @@ nav, .toolbar {
 }
 
 .search-block .search-input {
-    width: 300px;
     float: right;
+
+    width: 300px;
 }
 
 /* main */
 [ui-view='main'] {
+    height: calc(100vh - 80px);
+
     background-color: #f1efe7;
 }
 
 .main {
-    padding: 60px 40px;
+    padding: 50px 40px;
 }
 
 .card {
-    height: 180px;
-    border: 1px solid #1b6d85;
-    background-color: #fff;
-    margin: 15px 0;
     position: relative;
+
+    height: 180px;
+    margin: 15px 0;
+
+    cursor: pointer;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+
+    background-color: #a1beb4;
+    -webkit-box-shadow: 0 0 2px 0 rgb(140, 140, 140);
+    -moz-box-shadow: 0 0 2px 0 rgb(140, 140, 140);
+    box-shadow: 0 0 2px 1px rgb(140, 140, 140);
 }
 
-.card .card-margin{
-    height: calc(100% - 45px);
-    width: 35px;
-    border-right: 2px solid #b06672;
-    position: relative;
+.card:hover {
+    -webkit-box-shadow: 0 0 8px 0 rgb(140, 140, 140);
+    -moz-box-shadow: 0 0 8px 0 rgb(140, 140, 140);
+    box-shadow: 0 0 8px 1px rgb(140, 140, 140);
 }
-.card .card-margin:after,
-.card .card-margin:before{
-    content: '';
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #9b9b9b;
+
+.card .card-title {
+    font-size: 1.4em;
+    font-weight: 300;
+
+    display: flex;
+
+    height: 100%;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.card .card-owner {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+}
+
+.card .card-item-count {
+    font-size: .8em;
+
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+
+    color: #759a8d;
+}
+
+.card .card-owner img {
+    width: 24px;
+    height: 24px;
+
+    border-radius: 3px;
+}
+
+.card.card-note .card-margin {
+    position: relative;
+
+    width: 35px;
+    height: calc(100% - 45px);
+
+    border-right: 2px solid #b06672;
+}
+
+.card.card-note .card-margin:after,
+.card.card-note .card-margin:before {
     position: absolute;
     left: 12px;
+
+    display: inline-block;
+
+    width: 12px;
+    height: 12px;
+
+    content: '';
+
+    border-radius: 50%;
+    background-color: #9b9b9b;
 }
 
-.card .card-margin:before{
+.card.card-note .card-margin:before {
     top: 20%;
 }
 
-.card .card-margin:after{
+.card.card-note .card-margin:after {
     bottom: 20%;
 }
 
-.card .card-content{
-    font-size: 0.5em;
-    display: inline-block;
-    height: calc(100% - 75px);
-    width: calc(100% - 35px);
-    padding: 5px;
-    margin: 0;
+.card.card-note .card-content {
+    font-size: .5em;
+
     position: absolute;
-    right: 0;
     top: 30px;
+    right: 0;
+
+    display: inline-block;
     overflow-y: auto;
+
+    width: calc(100% - 35px);
+    height: calc(100% - 75px);
+    margin: 0;
+    padding: 5px;
+
     overflow-wrap: break-word;
 }
 
-.card .card-name{
+.card.card-note .card-name {
     position: absolute;
     top: 0;
     left: 35px;
-    padding: 5px;
+
     width: calc(100% - 35px);
+    padding: 5px;
+
     text-align: center;
 }
 
-.card .card-status{
-    height: 45px;
-    border-top: 2px solid #c1c1c1;
+.card.card-note .card-status {
+    font-size: .7em;
+
     position: absolute;
     bottom: 0;
+
     width: 100%;
-    background-color: #fff;
-    font-size: 0.7em;
-    padding-left: 38px;
+    height: 45px;
     padding-top: 15px;
+    padding-left: 38px;
+
     color: #b06672;
+    border-top: 2px solid #c1c1c1;
+    background-color: #fff;
 }
 
 /* card type 1 */
 
-.card.card-type-1 .card-status{
-    -webkit-box-shadow: 0px -9px 31px -18px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px -9px 31px -18px rgba(0,0,0,0.75);
-    box-shadow: 0px -9px 31px -18px rgba(0,0,0,0.75);
+.card.card-type-1 .card-name,
+.card.card-type-1 .card-margin,
+.card.card-type-1 .card-content {
+    background-color: #fff;
+}
+
+.card.card-type-1 .card-status {
+    -webkit-box-shadow: 0 -9px 31px -18px rgba(0, 0, 0, .75);
+    -moz-box-shadow: 0 -9px 31px -18px rgba(0, 0, 0, .75);
+    box-shadow: 0 -9px 31px -18px rgba(0, 0, 0, .75);
 }
 
 /* card type 2 */
-.card.card-type-2{
+.card.card-type-2 {
     background-color: #fdde9d;
 }
 
-.card.card-type-2 .card-name{
-    width: 100%;
+.card.card-type-2 .card-name {
     left: 0;
+
+    width: 100%;
     padding-left: 38px;
+
     border-bottom: 2px solid #dd703b;
 }
 
-.card.card-type-2 .card-status{
-    background-color: #fdde9d;
-    border-top: none;
+.card.card-type-2 .card-status {
     color: #000;
+    border-top: none;
+    background-color: #fdde9d;
 }
-.card.card-type-2 .card-margin{
-    height: 100%;
+
+.card.card-type-2 .card-margin {
     z-index: 2;
+
+    height: 100%;
 }
 
 /* card type 3 */
 
-.card.card-type-3 .card-name{
-    width: 100%;
+.card.card-type-3 .card-name,
+.card.card-type-3 .card-margin,
+.card.card-type-3 .card-content {
+    background-color: #fff;
+}
+
+.card.card-type-3 .card-name {
     left: 0;
+
+    width: 100%;
     padding-left: 38px;
+
     border-bottom: 2px solid #b06672;
 }
 
-.card.card-type-3 .card-status{
+.card.card-type-3 .card-status {
     border-top: none;
 }
-.card.card-type-3 .card-margin{
-    height: 100%;
+
+.card.card-type-3 .card-margin {
     z-index: 2;
+
+    height: 100%;
 }
 
 /* Have to set height explicity on ui-view
 to prevent collapsing during animation*/
 .ui-view-container {
     position: relative;
+
     height: 65px;
 }
 
-[ui-view].ng-enter, [ui-view].ng-leave {
+[ui-view].ng-enter,
+[ui-view].ng-leave {
     position: absolute;
-    left: 0;
     right: 0;
+    left: 0;
+
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -389,136 +540,214 @@ to prevent collapsing during animation*/
 }
 
 [ui-view].ng-enter {
+    -webkit-transform: scale3d(.5, .5, .5);
+    -moz-transform: scale3d(.5, .5, .5);
+    transform: scale3d(.5, .5, .5);
+
     opacity: 0;
-    -webkit-transform: scale3d(0.5, 0.5, 0.5);
-    -moz-transform: scale3d(0.5, 0.5, 0.5);
-    transform: scale3d(0.5, 0.5, 0.5);
 }
 
 [ui-view].ng-enter-active {
-    opacity: 1;
     -webkit-transform: scale3d(1, 1, 1);
     -moz-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
+
+    opacity: 1;
 }
 
 [ui-view].ng-leave {
-    opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+
+    opacity: 1;
 }
 
 [ui-view].ng-leave-active {
-    opacity: 0;
     -webkit-transform: translate3d(100px, 0, 0);
     -moz-transform: translate3d(100px, 0, 0);
     transform: translate3d(100px, 0, 0);
+
+    opacity: 0;
 }
 
-.modal-backdrop{
+.modal-backdrop {
     background-color: #f5f5f5;
 }
 
-.modal-backdrop.in{
-    opacity: 0.8;
+.modal-backdrop.in {
+    opacity: .8;
 }
 
 .modal-dialog {
     position: static;
+
     width: 100%;
     height: 100%;
     margin: 0;
 }
 
 .modal-body {
-    background: #fff;
     position: fixed;
+    top: 115px;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    top: 115px;
-    padding: 0;
-    margin: 0 auto;
+
     max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+
+    background: #fff;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     .modal-body {
         max-width: 65%;
     }
 }
 
-
-.modal-body .close{
-    opacity: 1;
-    position: fixed;
-    right: 45px;
-    top: 12px;
-    z-index: 2;
-    text-shadow: none;
-    color: #a3a2ab;
+.modal-body .close {
     font-size: 2.2em;
+
+    position: fixed;
+    z-index: 2;
+    top: 12px;
+    right: 45px;
+
+    opacity: 1;
+    color: #a3a2ab;
+    text-shadow: none;
 }
 
-.ql-editor{
+.ql-editor {
     padding: 60px 10% 12px;
 }
 
-.note-name{
-    background-color: #464451;
-    color: white;
-    padding: 18px 10px 17px 10px;
+.note-name {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 260px;
+    padding: 18px 10px 17px 10px;
+
+    color: white;
+    background-color: #464451;
 }
 
-.note-name i{
+.note-name i {
     font-size: 1.6em;
 }
-.note-name input{
-    background: transparent;
-    border: none;
+
+.note-name input {
     font-size: 1.4em;
+
+    border: none;
+    background: transparent;
 }
 
 .ql-toolbar.ql-snow {
-    text-align: center;
-    background-color: #464451;
-    z-index: 1;
-    color: white;
-    padding: 20px 10px;
     position: fixed;
+    z-index: 1;
     top: 0;
-    left: 260px;
-    padding-right: 260px;
     right: 0;
+    left: 260px;
+
+    padding: 20px 10px;
+    padding-right: 260px;
+
+    text-align: center;
+
+    color: white;
     border: none;
-    border-bottom: 1px solid #D5D5D5;
+    border-bottom: 1px solid #d5d5d5;
+    background-color: #464451;
 }
 
 .ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-options {
     background-color: #464451;
 }
 
-.ql-snow .ql-stroke, .ql-snow .ql-picker,
-.ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill {
-    stroke: #fff;
+.ql-snow .ql-stroke,
+.ql-snow .ql-picker,
+.ql-snow .ql-fill,
+.ql-snow .ql-stroke.ql-fill {
     color: #fff;
+
+    stroke: #fff;
 }
 
-.ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill {
+.ql-snow .ql-fill,
+.ql-snow .ql-stroke.ql-fill {
     fill: #fff;
 }
+
 .ql-snow.ql-toolbar button:hover .ql-fill {
     fill: #ff9c54;
 }
 
-.ql-snow.ql-toolbar button:hover, .ql-snow .ql-toolbar button:hover, .ql-snow.ql-toolbar button.ql-active, .ql-snow .ql-toolbar button.ql-active, .ql-snow.ql-toolbar .ql-picker-label:hover, .ql-snow .ql-toolbar .ql-picker-label:hover, .ql-snow.ql-toolbar .ql-picker-label.ql-active, .ql-snow .ql-toolbar .ql-picker-label.ql-active, .ql-snow.ql-toolbar .ql-picker-item:hover, .ql-snow .ql-toolbar .ql-picker-item:hover, .ql-snow.ql-toolbar .ql-picker-item.ql-selected, .ql-snow .ql-toolbar .ql-picker-item.ql-selected,
-.ql-snow.ql-toolbar button:hover .ql-fill, .ql-snow .ql-toolbar button:hover .ql-fill, .ql-snow.ql-toolbar button.ql-active .ql-fill, .ql-snow .ql-toolbar button.ql-active .ql-fill, .ql-snow.ql-toolbar .ql-picker-label:hover .ql-fill, .ql-snow .ql-toolbar .ql-picker-label:hover .ql-fill, .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-fill, .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-fill, .ql-snow.ql-toolbar .ql-picker-item:hover .ql-fill, .ql-snow .ql-toolbar .ql-picker-item:hover .ql-fill, .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-fill, .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-fill, .ql-snow.ql-toolbar button:hover .ql-stroke.ql-fill, .ql-snow .ql-toolbar button:hover .ql-stroke.ql-fill, .ql-snow.ql-toolbar button.ql-active .ql-stroke.ql-fill, .ql-snow .ql-toolbar button.ql-active .ql-stroke.ql-fill, .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill, .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill, .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill, .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill, .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill, .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill, .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill, .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill,
-.ql-snow.ql-toolbar button:hover .ql-stroke, .ql-snow .ql-toolbar button:hover .ql-stroke, .ql-snow.ql-toolbar button.ql-active .ql-stroke, .ql-snow .ql-toolbar button.ql-active .ql-stroke, .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke, .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke, .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke, .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke, .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke, .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke, .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke, .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke, .ql-snow.ql-toolbar button:hover .ql-stroke-miter, .ql-snow .ql-toolbar button:hover .ql-stroke-miter, .ql-snow.ql-toolbar button.ql-active .ql-stroke-miter, .ql-snow .ql-toolbar button.ql-active .ql-stroke-miter, .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke-miter, .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke-miter, .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter, .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter, .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke-miter, .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke-miter, .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter, .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter {
-    stroke: #ff9c54;
+.ql-snow.ql-toolbar button:hover,
+.ql-snow .ql-toolbar button:hover,
+.ql-snow.ql-toolbar button.ql-active,
+.ql-snow .ql-toolbar button.ql-active,
+.ql-snow.ql-toolbar .ql-picker-label:hover,
+.ql-snow .ql-toolbar .ql-picker-label:hover,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active,
+.ql-snow.ql-toolbar .ql-picker-item:hover,
+.ql-snow .ql-toolbar .ql-picker-item:hover,
+.ql-snow.ql-toolbar .ql-picker-item.ql-selected,
+.ql-snow .ql-toolbar .ql-picker-item.ql-selected,
+.ql-snow.ql-toolbar button:hover .ql-fill,
+.ql-snow .ql-toolbar button:hover .ql-fill,
+.ql-snow.ql-toolbar button.ql-active .ql-fill,
+.ql-snow .ql-toolbar button.ql-active .ql-fill,
+.ql-snow.ql-toolbar .ql-picker-label:hover .ql-fill,
+.ql-snow .ql-toolbar .ql-picker-label:hover .ql-fill,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-fill,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-fill,
+.ql-snow.ql-toolbar .ql-picker-item:hover .ql-fill,
+.ql-snow .ql-toolbar .ql-picker-item:hover .ql-fill,
+.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-fill,
+.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-fill,
+.ql-snow.ql-toolbar button:hover .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar button:hover .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar button.ql-active .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar button.ql-active .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar button:hover .ql-stroke,
+.ql-snow .ql-toolbar button:hover .ql-stroke,
+.ql-snow.ql-toolbar button.ql-active .ql-stroke,
+.ql-snow .ql-toolbar button.ql-active .ql-stroke,
+.ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke,
+.ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke,
+.ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke,
+.ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke,
+.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke,
+.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke,
+.ql-snow.ql-toolbar button:hover .ql-stroke-miter,
+.ql-snow .ql-toolbar button:hover .ql-stroke-miter,
+.ql-snow.ql-toolbar button.ql-active .ql-stroke-miter,
+.ql-snow .ql-toolbar button.ql-active .ql-stroke-miter,
+.ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke-miter,
+.ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke-miter,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,
+.ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
+.ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
+.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter,
+.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter {
     color: #ff9c54;
+
+    stroke: #ff9c54;
 }

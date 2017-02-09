@@ -1,11 +1,16 @@
 <div class="main">
     <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-12" ng-repeat="card in $ctrl.cards">
-            <div class="card" ng-class="card.cardModifier" ng-click="$ctrl.editCard(card)">
-                <div class="card-margin"></div>
-                <div class="card-name">{{card.name}}</div>
-                <div class="card-status">{{card.lastUpdated | timeago}}</div>
-                <div class="card-content" ng-bind-html="card.contentHtml"></div>
+            <div class="card" ng-class="[card.cardModifier, card.note ? 'card-note':'']" ng-click="$ctrl.editCard(card)">
+                <div ng-if="card.note" class="card-margin"></div>
+                <div ng-if="card.note" class="card-name">{{card.name}}</div>
+                <div ng-if="card.note" class="card-status">{{card.lastUpdated | timeago}}</div>
+                <div ng-if="card.note" class="card-content" ng-bind-html="card.contentHtml"></div>
+                <div class="card-owner">
+                    <img ng-src="{{card.ownerPicture}}" alt="{{card.name}}">
+                </div>
+                <div ng-if="!card.note" class="card-title">test</div>
+                <div ng-if="!card.note" class="card-item-count">31 items</div>
             </div>
         </div>
     </div>
